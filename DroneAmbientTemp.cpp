@@ -117,7 +117,7 @@ float DroneAmbientTemp::read()
     readValue = dhtSensor.getHumidity();
 
 
-  //Serial.println("Temperature: " + String(readValue));
+  Serial.println("Temperature: " + String(readValue));
 
   return readValue;
 

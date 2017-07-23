@@ -60,7 +60,7 @@ void oBee::SetUpDrone(String str)
     //Serial.println("SetupDrone-TYPE:" + strType);
 
     String strPin1 = str.substring (posPIN1+6, posPIN2);
-    Serial.println("SetupDrone-PIN1:" + strPin1);
+    //Serial.println("SetupDrone-PIN1:" + strPin1);
 
     String strPin2 = str.substring (posPIN2+6, posBZZR);
     //Serial.println("SetupDrone-PIN2:" + strPin2);
@@ -81,19 +81,19 @@ void oBee::SetUpDrone(String str)
     //Serial.println("SetupDrone-FIELDNAME:" + strFieldName);
 
     String strMode = str.substring (posMode+6, posWorkerID);
-    Serial.println("SetupDrone-MODE:" + strMode);
+    //Serial.println("SetupDrone-MODE:" + strMode);
 
     String strWID = str.substring (posWorkerID+5, posWTimer);
-    Serial.println("SetupDrone-WORKERID:" + strWID);
+    //Serial.println("SetupDrone-WORKERID:" + strWID);
 
     String strWTimer = str.substring (posWTimer+8, posInverted);
-    Serial.println("SetupDrone-WORKERTIME:" + strWTimer);
+    //Serial.println("SetupDrone-WORKERTIME:" + strWTimer);
 
     String strInverted = str.substring (posInverted+10, posNotification);
-    Serial.println("SetupDrone-INVERTED:" + strInverted);
+    //Serial.println("SetupDrone-INVERTED:" + strInverted);
 
     String strNotification = str.substring (posNotification+10);
-    Serial.println("SetupDrone-NOTIFICATION:" + strNotification);
+    //Serial.println("SetupDrone-NOTIFICATION:" + strNotification);
 
 
     int droneID = strId.toInt();
@@ -416,6 +416,9 @@ void oBee::RGBNotification(int id)
 
     switch(id)
     {
+      case 0:
+        oRGB.RainbowCycle(5);
+        break;
       case 1:
         //Notification 1
         color1 = oRGB.Color(100, 55, 0);

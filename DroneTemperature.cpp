@@ -50,7 +50,7 @@ void DroneTemperature::GetSensor(sensor *oSensor)
     oSensor->droneID = _sensor.droneID;
     oSensor->type = _sensor.type;
     oSensor->pin = _sensor.pin;
-    oSensor->pin2 = _sensor.pin2;
+    oSensor->pin2 = _sensor.pin2; //Usado para identificar el ID del sensor (default 0) - Se puede usar mas de un sensor en el MISMO GPIO
     oSensor->buzzerNotificationID = _sensor.buzzerNotificationID;
     oSensor->rgbNotificationID = _sensor.rgbNotificationID;
     oSensor->notificationElapsedTime = _sensor.notificationElapsedTime;
